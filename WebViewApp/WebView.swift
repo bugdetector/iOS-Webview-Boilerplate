@@ -16,6 +16,7 @@ struct WebView: UIViewRepresentable {
         Coordinator(self)
     }
     
+    // Initialize configuration
     func makeUIView(context: Context) -> WKWebView {
         print("makeUIView")
         let prefs = WKWebpagePreferences()
@@ -35,6 +36,7 @@ struct WebView: UIViewRepresentable {
         return webview
     }
     
+    // Initialize webview with url
     func updateUIView(_ uiView: WKWebView, context: Context) {
         guard let myUrl = url else {
             return
@@ -45,18 +47,14 @@ struct WebView: UIViewRepresentable {
     
     class Coordinator : NSObject, WKNavigationDelegate {
         var parent: WebView
-        var callbackValueFromNative: AnyCancellable? = nil
         
         init(_ uiWebView: WebView) {
             self.parent = uiWebView
         }
         
-        deinit {
-            callbackValueFromNative?.cancel()
-        }
-        
+        // initial,ze webview
         func webView(_ webview: WKWebView, didFinish: WKNavigation!) {
-            webview.customUserAgent = "iOSApp"
+            webview.customUserAgent = "ios-web-view"
             
             webview.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
                 for cookie in cookies {
@@ -67,6 +65,7 @@ struct WebView: UIViewRepresentable {
             }
         }
         
+        // Open in onather app if url is not starts with base url
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction,
                          decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             guard
@@ -83,14 +82,26 @@ struct WebView: UIViewRepresentable {
             decisionHandler(.allow)
         }
         
+        // Download file if respons is not html
         func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
-            let mime = navigationResponse.response.mimeType
             if navigationResponse.response.mimeType == "text/html" {
                 decisionHandler(.allow)
             } else {
-                decisionHandler(.download)
+                guard
+                    let url = navigationResponse.response.url else {
+                        decisionHandler(.cancel)
+                        return
+                }
+                UIApplication.shared.open(
+                    url,
+                    options: [:],
+                    completionHandler: nil)
+                decisionHandler(.cancel)
+                return
             }
         }
+        
+        
     }
 }
 

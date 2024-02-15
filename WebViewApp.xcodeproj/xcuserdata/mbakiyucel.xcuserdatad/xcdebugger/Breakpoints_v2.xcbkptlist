@@ -14,42 +14,10 @@
             filePath = "WebViewApp/WebView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "98BC1339-CD17-4EE8-B68C-D4535203829E - cd68dfa89c28cbab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WebViewApp.WebView.Coordinator.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, preferences: __C.WKWebpagePreferences, decisionHandler: (__C.WKNavigationActionPolicy, __C.WKWebpagePreferences) -&gt; ()) -&gt; ()"
-                  moduleName = "WebViewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mbakiyucel/Desktop/Projects/iOS/WebViewApp/WebViewApp/WebView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "98BC1339-CD17-4EE8-B68C-D4535203829E - c6a0979b121b560e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WebViewApp.WebView.Coordinator.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationResponse, decisionHandler: (__C.WKNavigationResponsePolicy) -&gt; ()) -&gt; ()"
-                  moduleName = "WebViewApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mbakiyucel/Desktop/Projects/iOS/WebViewApp/WebViewApp/WebView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "300">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -62,8 +30,8 @@
             filePath = "WebViewApp/WebView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
