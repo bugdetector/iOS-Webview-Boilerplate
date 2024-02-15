@@ -1,6 +1,6 @@
 //
 //  WebViewScreen.swift
-//  Created by Atif Qamar on 26/01/24.
+//  Created by Murat Baki Yücel on 26/01/24.
 //
 
 
@@ -15,7 +15,7 @@ struct WebViewScreen: View {
         NavigationView {
             ZStack {
                 VStack {
-                    WebView(url: URL(string: "https://www.example.com"), viewModel: viewModel)
+                    WebView(url: URL(string: Constants.BASE_URL), viewModel: viewModel)
                 }
             }
         }

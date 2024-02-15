@@ -16,6 +16,7 @@
 		53F9AD692B6410A80058839F /* WebViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9AD682B6410A80058839F /* WebViewAppTests.swift */; };
 		53F9AD732B6410A80058839F /* WebViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9AD722B6410A80058839F /* WebViewAppUITests.swift */; };
 		53F9AD752B6410A80058839F /* WebViewAppUITestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9AD742B6410A80058839F /* WebViewAppUITestLaunchTests.swift */; };
+		E91441A22B7D891A00130932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91441A12B7D891A00130932 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +45,11 @@
 		53F9AD5B2B6410A70058839F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53F9AD5E2B6410A70058839F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53F9AD642B6410A80058839F /* WebViewApp_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewApp_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53F9AD682B6410A80058839F /* WebViewApp_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppTests.swift; sourceTree = "<group>"; };
+		53F9AD682B6410A80058839F /* WebViewAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppTests.swift; sourceTree = "<group>"; };
 		53F9AD6E2B6410A80058839F /* WebViewApp_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewApp_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F9AD722B6410A80058839F /* WebViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppUITests.swift; sourceTree = "<group>"; };
 		53F9AD742B6410A80058839F /* WebViewAppUITestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppUITestLaunchTests.swift; sourceTree = "<group>"; };
+		E91441A12B7D891A00130932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		53F9AD562B6410A50058839F /* WebViewApp */ = {
 			isa = PBXGroup;
 			children = (
+				E91441A12B7D891A00130932 /* Constants.swift */,
 				53CB77D62B650E9B001C0F33 /* WebView.swift */,
 				53CB77D72B650E9C001C0F33 /* WebViewModel.swift */,
 				53CB77D82B650E9C001C0F33 /* WebViewScreen.swift */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91441A22B7D891A00130932 /* Constants.swift in Sources */,
 				53F9AD582B6410A50058839F /* WebViewApp.swift in Sources */,
 				53CB77D92B650E9C001C0F33 /* WebView.swift in Sources */,
 				53CB77DA2B650E9C001C0F33 /* WebViewModel.swift in Sources */,
