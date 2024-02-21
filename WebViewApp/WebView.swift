@@ -12,6 +12,8 @@ struct WebView: UIViewRepresentable {
     let url: URL?
     @ObservedObject var viewModel: WebViewModel
     
+    var navigatorGeolocation = NavigatorGeolocation()
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
@@ -32,6 +34,8 @@ struct WebView: UIViewRepresentable {
         webview.navigationDelegate = context.coordinator
         webview.allowsBackForwardNavigationGestures = true
         webview.scrollView.isScrollEnabled = true
+        
+        navigatorGeolocation.setWebView(webView: webview)
         
         return webview
     }
@@ -63,6 +67,7 @@ struct WebView: UIViewRepresentable {
                     }
                 }
             }
+            webview.evaluateJavaScript(parent.navigatorGeolocation.getJavaScriptToEvaluate())
         }
         
         // Open in onather app if url is not starts with base url
