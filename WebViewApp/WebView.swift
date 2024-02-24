@@ -10,7 +10,6 @@ import Combine
 struct WebView: UIViewRepresentable {
     
     let url: URL?
-    @ObservedObject var viewModel: WebViewModel
     
     var navigatorGeolocation = NavigatorGeolocation()
     
@@ -20,7 +19,6 @@ struct WebView: UIViewRepresentable {
     
     // Initialize configuration
     func makeUIView(context: Context) -> WKWebView {
-        print("makeUIView")
         let prefs = WKWebpagePreferences()
         prefs.allowsContentJavaScript = true
         
@@ -56,14 +54,25 @@ struct WebView: UIViewRepresentable {
             self.parent = uiWebView
         }
         
-        // initial,ze webview
+        // initialize webview
         func webView(_ webview: WKWebView, didFinish: WKNavigation!) {
             webview.customUserAgent = "ios-web-view"
             
             webview.configuration.websiteDataStore.httpCookieStore.getAllCookies { cookies in
                 for cookie in cookies {
                     if(cookie.name == "session-token"){
-                        print(cookie.value)
+                        let preferences = UserDefaults.standard
+                        preferences.set(cookie.value, forKey: cookie.name)
+                        preferences.synchronize()
+                        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                        UNUserNotificationCenter.current().requestAuthorization(
+                            options: authOptions,
+                            completionHandler: { granted, error in
+                                if granted {
+                                    FCMSender.sendToServer(isGranted: granted)
+                                }
+                            }
+                        )
                     }
                 }
             }
@@ -105,8 +114,6 @@ struct WebView: UIViewRepresentable {
                 return
             }
         }
-        
-        
     }
 }
 

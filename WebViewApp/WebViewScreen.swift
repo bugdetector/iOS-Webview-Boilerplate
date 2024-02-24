@@ -9,13 +9,13 @@ import SwiftUI
 
 struct WebViewScreen: View {
     
-    @ObservedObject var viewModel = WebViewModel()
+    var url: String? = nil
     
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
-                    WebView(url: URL(string: Constants.BASE_URL), viewModel: viewModel)
+                    WebView(url: URL(string: url != nil ? url! : Constants.BASE_URL))
                 }
             }
         }

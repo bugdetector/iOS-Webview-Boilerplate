@@ -7,4 +7,5 @@
 
 class Constants {
     static let BASE_URL = "https://www.example.com";
+    static let FIREBASE_TOKEN_REGISTER_URL = "https://www.example.com/notifications/saveIosFcmSubscription"
 }
