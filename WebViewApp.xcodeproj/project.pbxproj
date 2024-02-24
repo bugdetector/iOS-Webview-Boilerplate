@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		53CB77D92B650E9C001C0F33 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB77D62B650E9B001C0F33 /* WebView.swift */; };
-		53CB77DA2B650E9C001C0F33 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB77D72B650E9C001C0F33 /* WebViewModel.swift */; };
 		53CB77DB2B650E9C001C0F33 /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB77D82B650E9C001C0F33 /* WebViewScreen.swift */; };
 		53F9AD582B6410A50058839F /* WebViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F9AD572B6410A50058839F /* WebViewApp.swift */; };
 		53F9AD5C2B6410A70058839F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F9AD5B2B6410A70058839F /* Assets.xcassets */; };
@@ -20,6 +19,9 @@
 		E91441A42B7E65F100130932 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E91441A32B7E65F100130932 /* GoogleService-Info.plist */; };
 		E91441A72B7E68E800130932 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E91441A62B7E68E800130932 /* FirebaseAnalytics */; };
 		E95569842B84FE8D0027EE44 /* NavigatorGeolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95569832B84FE8D0027EE44 /* NavigatorGeolocation.swift */; };
+		E9F8E7092B8A0CC4001AAEEE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = E9F8E7082B8A0CC4001AAEEE /* FirebaseMessaging */; };
+		E9F8E70B2B8A0D90001AAEEE /* NotificationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8E70A2B8A0D90001AAEEE /* NotificationData.swift */; };
+		E9F8E70D2B8A0DB8001AAEEE /* FCMSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F8E70C2B8A0DB8001AAEEE /* FCMSender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		53CB77D62B650E9B001C0F33 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		53CB77D72B650E9C001C0F33 /* WebViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		53CB77D82B650E9C001C0F33 /* WebViewScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
 		53F9AD542B6410A50058839F /* WebViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F9AD572B6410A50058839F /* WebViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewApp.swift; sourceTree = "<group>"; };
@@ -55,6 +56,8 @@
 		E91441A12B7D891A00130932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E91441A32B7E65F100130932 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E95569832B84FE8D0027EE44 /* NavigatorGeolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorGeolocation.swift; sourceTree = "<group>"; };
+		E9F8E70A2B8A0D90001AAEEE /* NotificationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationData.swift; sourceTree = "<group>"; };
+		E9F8E70C2B8A0DB8001AAEEE /* FCMSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMSender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F8E7092B8A0CC4001AAEEE /* FirebaseMessaging in Frameworks */,
 				E91441A72B7E68E800130932 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,11 +114,12 @@
 				E91441A12B7D891A00130932 /* Constants.swift */,
 				53CB77D62B650E9B001C0F33 /* WebView.swift */,
 				E95569832B84FE8D0027EE44 /* NavigatorGeolocation.swift */,
-				53CB77D72B650E9C001C0F33 /* WebViewModel.swift */,
 				53CB77D82B650E9C001C0F33 /* WebViewScreen.swift */,
 				53F9AD572B6410A50058839F /* WebViewApp.swift */,
 				53F9AD5B2B6410A70058839F /* Assets.xcassets */,
 				53F9AD5D2B6410A70058839F /* Preview Content */,
+				E9F8E70A2B8A0D90001AAEEE /* NotificationData.swift */,
+				E9F8E70C2B8A0DB8001AAEEE /* FCMSender.swift */,
 			);
 			path = WebViewApp;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			name = WebViewApp;
 			packageProductDependencies = (
 				E91441A62B7E68E800130932 /* FirebaseAnalytics */,
+				E9F8E7082B8A0CC4001AAEEE /* FirebaseMessaging */,
 			);
 			productName = WebViewApp;
 			productReference = 53F9AD542B6410A50058839F /* WebViewApp.app */;
@@ -282,11 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E91441A22B7D891A00130932 /* Constants.swift in Sources */,
+				E9F8E70D2B8A0DB8001AAEEE /* FCMSender.swift in Sources */,
 				53F9AD582B6410A50058839F /* WebViewApp.swift in Sources */,
 				E95569842B84FE8D0027EE44 /* NavigatorGeolocation.swift in Sources */,
 				53CB77D92B650E9C001C0F33 /* WebView.swift in Sources */,
-				53CB77DA2B650E9C001C0F33 /* WebViewModel.swift in Sources */,
 				53CB77DB2B650E9C001C0F33 /* WebViewScreen.swift in Sources */,
+				E9F8E70B2B8A0D90001AAEEE /* NotificationData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +644,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E91441A52B7E68E700130932 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		E9F8E7082B8A0CC4001AAEEE /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E91441A52B7E68E700130932 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
