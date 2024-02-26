@@ -53,6 +53,7 @@
 		53F9AD6E2B6410A80058839F /* WebViewApp_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebViewApp_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F9AD722B6410A80058839F /* WebViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppUITests.swift; sourceTree = "<group>"; };
 		53F9AD742B6410A80058839F /* WebViewAppUITestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAppUITestLaunchTests.swift; sourceTree = "<group>"; };
+		E9005C6A2B8C6A140052C09C /* WebViewApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebViewApp.entitlements; sourceTree = "<group>"; };
 		E91441A12B7D891A00130932 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E91441A32B7E65F100130932 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E95569832B84FE8D0027EE44 /* NavigatorGeolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorGeolocation.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		53F9AD562B6410A50058839F /* WebViewApp */ = {
 			isa = PBXGroup;
 			children = (
+				E9005C6A2B8C6A140052C09C /* WebViewApp.entitlements */,
 				E91441A32B7E65F100130932 /* GoogleService-Info.plist */,
 				E91441A12B7D891A00130932 /* Constants.swift */,
 				53CB77D62B650E9B001C0F33 /* WebView.swift */,
@@ -456,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebViewApp/WebViewApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebViewApp/Preview Content\"";
@@ -486,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebViewApp/WebViewApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebViewApp/Preview Content\"";
